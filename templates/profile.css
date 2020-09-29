@@ -1,0 +1,142 @@
+@keyframes button {
+    from {}
+    to {
+        background: white;
+        color: black;
+    }
+}
+body {
+    margin: 0px;
+    display: grid;
+    grid: 'h h' 48px
+    'm m' auto
+    'f f' 155px
+        /1fr 1fr;
+    background: #FFFFFF;
+    justify-items: center;
+    min-height: 100vh;
+}
+footer {
+    background: url(../images/Vector.jpg);
+    border: 2px solid #FFFFFF;
+    width: 1440px;
+    height: 80px;
+    box-sizing: border-box;
+    grid-area: f;
+    align-self: end;
+}
+h3 {
+    margin: 0px;
+    margin-bottom: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+#rating {
+    font-size: 24px;
+    color: #FFE600;
+}
+main {
+    grid-area: m;
+    width: 416px;
+    padding: 32px;
+    align-self: center;
+}
+section {
+
+}
+img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+#rating {
+    height: 24px;
+}
+i {
+    width: 24px;
+    height: 24px;
+}
+.text{
+    font-family: Exo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: 192px;
+    margin-top: 40px;
+}
+header {
+    grid-area: h;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 195px;
+    background: #464646;;
+    color: #F8F8F8;
+    font-family: Freehand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    width: 1440px;
+    box-sizing: border-box;
+}
+.burger{
+    width: 32px;
+    height: 0px;
+    left: 1216px;
+    top: 12px;
+    border: 2px solid #FFFFFF;
+}
+.right {
+    display: grid;
+}
+div#info {
+    display: grid;
+    align-self: end;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    grid-gap: 16px;
+    padding-top: 32px;
+}
+.buttons {
+    grid-gap: 32px;
+    padding-top: 48px;
+    display: grid;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    border: black solid 2px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+.burger2{
+    width: 32px;
+    height: 0px;
+    left: 1216px;
+    margin-top: 5px;
+    border: 2px solid #FFFFFF;
+}
+.burger3{
+    width: 32px;
+    height: 0px;
+    left: 1216px;
+    margin-top: 5px;
+    border: 2px solid #FFFFFF;
+}
+section.headSection {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 32px;
+}

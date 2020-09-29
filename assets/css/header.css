@@ -1,0 +1,77 @@
+header {
+    grid-area: h;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 195px;
+    background: #464646;;
+    color: #F8F8F8;
+    font-family: Freehand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    width: 1440px;
+    box-sizing: border-box;
+}
+header #burger:focus + aside{
+    display: grid;
+}
+/*header #burger:hover + aside{
+    display: grid;
+}
+aside:hover {
+    display: grid;
+}*/
+div#burger {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    outline: none;
+}
+aside {
+    position: absolute;
+    right: 39px;
+    background-color: #464646;
+    top: 48px;
+    width: 272px;
+    display: none;
+    grid-auto-rows: 40px;
+    padding: 16px 40px;
+    box-sizing: border-box;
+    align-content: center;
+    z-index: 10;
+}
+aside div {
+    border-bottom: solid 1px #878787;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+aside div:hover {
+    color: #464646;
+    background-color: #F8F8F8;
+}
+
+.burger{
+    width: 32px;
+    height: 0px;
+    left: 1216px;
+    top: 12px;
+    border: 2px solid #FFFFFF;
+}
+.burger2{
+    width: 32px;
+    height: 0px;
+    left: 1216px;
+    margin-top: 5px;
+    border: 2px solid #FFFFFF;
+}
+.burger3{
+    width: 32px;
+    height: 0px;
+    left: 1216px;
+    margin-top: 5px;
+    border: 2px solid #FFFFFF;
+}
