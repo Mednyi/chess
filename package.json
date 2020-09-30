@@ -1,0 +1,30 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "chess",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --require @babel/polyfill --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mednyi/chess.git"
+  },
+  "keywords": [
+    "chess"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mednyi/chess/issues"
+  },
+  "homepage": "https://github.com/Mednyi/chess#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/polyfill": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
+  }
+}
