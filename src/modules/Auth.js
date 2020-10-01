@@ -38,6 +38,9 @@ export default class Auth extends Component {
                 this.data.password = passwordInput.value;
                 this.data.passErr = !passRegEx.test(this.data.password);
                 this.render();
+            },
+            goToProfile () {
+                this.$router.push('profile');
             }
         }
     }
@@ -46,5 +49,7 @@ export default class Auth extends Component {
         emailInput.onblur = this.methods.verifyEmail;
         const passwordInput = this.$el.children[1].children[1];
         passwordInput.onblur = this.methods.verifyPass;
+        const loginButton = this.$el.children[2].children[0];
+        loginButton.onclick = this.methods.goToProfile;
     }
 }
