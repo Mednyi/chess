@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="example"
+    errors="0" failures="1" hostname="" id="" package="example" skipped="0"
+    tests="1" time="6.939" timestamp="">
+  
+    <testcase name="Demo test ecosia.org" classname="example" time="6.939" assertions="1">  <failure message="Timed out while waiting for element &lt;body&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5214ms)">    at Object.Demo test ecosia.org (D:\projects\chess\e2e\example.js:5:14)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

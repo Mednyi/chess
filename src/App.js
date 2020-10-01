@@ -5,6 +5,7 @@ import Footer from "./modules/Footer.js";
 import Landing from "./modules/Landing.js";
 import Router from "./modules/framework/Router.js"
 import Auth from "./modules/Auth.js";
+import Profile from "./modules/Profile.js"
 const router = new Router(undefined, {
     landing: {
         path: '',
@@ -13,6 +14,10 @@ const router = new Router(undefined, {
     auth: {
         path: 'auth',
         component: Auth
+    },
+    profile: {
+        path: 'profile',
+        component: Profile
     }
 });
 Component.use({$router: router});

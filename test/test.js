@@ -1,6 +1,7 @@
 import { expect } from 'chai'
 import Auth from '../src/modules/Auth'
 import mockEmails from '../mocks/emails'
+import mockEmailsBad from '../mocks/erroremails'
 const createComponent = data => new Auth(data);
 describe('Auth component testing', () => {
     describe('test input verification', () => {
@@ -8,14 +9,24 @@ describe('Auth component testing', () => {
             const component = createComponent();
             expect(component).to.be.a('object');
         })
-        it('test email input verification', () => {
+        it('test good email input verification', () => {
             const component = createComponent();
-            component.render();
-            for(let email in mockEmails) {
-                component.data.email = email;
+            for(let email of mockEmails) {
+                component.render = () => true;
+                component.$el = {children: [0, {children: [{value: email}]}]};
                 component.methods.verifyEmail();
-                console.log(JSON.stringify(component));
+                console.log(email);
                 expect(component.data.mailErr).to.equal(false)
+            }
+        })
+        it('test bad email input verification', () => {
+            const component = createComponent();
+            for(let email of mockEmailsBad) {
+                component.render = () => true;
+                component.$el = {children: [0, {children: [{value: email}]}]};
+                component.methods.verifyEmail();
+                console.log(email);
+                expect(component.data.mailErr).to.equal(true)
             }
         })
     })

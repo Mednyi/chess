@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="example"
+    errors="1" failures="0" hostname="" id="" package="example" skipped="0"
+    tests="1" time="7.841" timestamp="">
+  
+    <testcase name="Demo test ecosia.org" classname="example" time="7.841" assertions="0">
+    <error message="Tried to run command without establishing a connection" type="error"><![CDATA[
+    TimeoutError: Tried to run command without establishing a connection
+    at PeriodicPromise.getError (D:\projects\chess\node_modules\nightwatch\lib\utils\periodic-promise.js:161:12)
+    at PeriodicPromise.perform (D:\projects\chess\node_modules\nightwatch\lib\utils\periodic-promise.js:111:16)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        TimeoutError: Tried to run command without establishing a connection
+       at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

@@ -50,6 +50,6 @@ export default class Auth extends Component {
         const passwordInput = this.$el.children[1].children[1];
         passwordInput.onblur = this.methods.verifyPass;
         const loginButton = this.$el.children[2].children[0];
-        loginButton.onclick = this.methods.goToProfile;
+        loginButton.addEventListener('click', this.methods.goToProfile);
     }
 }

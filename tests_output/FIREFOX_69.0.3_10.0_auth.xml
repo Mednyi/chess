@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="auth"
+    errors="0" failures="1" hostname="" id="" package="auth" skipped="0"
+    tests="1" time="8.041" timestamp="">
+  
+    <testcase name="Auth email verification" classname="auth" time="8.041" assertions="1">  <failure message="Timed out while waiting for element &lt;main&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5138ms)">    at Object.Auth email verification (D:\projects\chess\e2e\auth.js:26:14)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        TimeoutError: Tried to run command without establishing a connection
+       at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
