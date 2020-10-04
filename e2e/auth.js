@@ -22,17 +22,30 @@ module.exports = {
     },*/
     'Auth email verification' : function (browser) {
         browser
-            .url('http://localhost:63342/chess/#/auth')
+            .url('http://localhost:5500/#/auth')
             .pause(10000)
             .waitForElementVisible('main')
             .assert.visible('input[type=text]');
         for(email of errMails) {
+            console.log(email)
             browser
                 .setValue('input[type=text]', email)
                 .click('input[type=password]')
-                .pause(5000)
-                .assert.cssProperty('input[type=text]', 'border-bottom-color', 'red')
-                .pause(5000)
+                .pause(1000)
+                .assert.cssClassPresent('input[type=text]', 'error')
+                .pause(1000)
+                .clearValue('input[type=text]')
+        }
+        for(email of goodMails) {
+            console.log(email)
+            browser
+                .setValue('input[type=text]', email)
+                .click('input[type=password]')
+                .pause(1000)
+                .assert.not.cssClassPresent('input[type=text]', 'error')
+                .assert.cssClassPresent('input[type=text]', 'success')
+                .pause(1000)
+                .clearValue('input[type=text]')
         }
         browser.end()
     }

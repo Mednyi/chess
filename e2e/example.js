@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
     'Demo test ecosia.org' : function(browser) {
         browser
             .url('https://www.ecosia.org/')
@@ -11,4 +11,4 @@ module.exports = {
             .assert.containsText('.mainline-results', 'Nightwatch.js')
             .end();
     }
-};
+}; */
