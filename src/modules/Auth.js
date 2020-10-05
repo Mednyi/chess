@@ -34,8 +34,8 @@ export default class Auth extends Component {
             },
             verifyPass () {
                 const passwordInput = this.$el.children[1].querySelector('#pass');
-                const passRegEx = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})');
                 this.data.password = passwordInput.value;
+                const passRegEx = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})');
                 this.data.passErr = !passRegEx.test(this.data.password);
                 this.render();
             },
