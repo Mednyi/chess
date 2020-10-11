@@ -1,4 +1,5 @@
 const errMails = [
+    'qwerty@me.ru',
     '11112qq',
     '@fhdssdjh.ru',
     'wqrqwwe@.ru',
@@ -95,7 +96,7 @@ module.exports = {
                 .assert.cssClassPresent('input[type=password]', 'error')
                 .pause(1000)
                 .clearValue('input[type=password]')
-        }        
+        }
         for(password of goodPasswords) {
             console.log(password)
             browser

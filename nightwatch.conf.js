@@ -25,7 +25,8 @@ module.exports = {
     default: {
       disable_error_log: false,
       launch_url: 'https://nightwatchjs.org',
-
+      skip_testcases_on_fail: false,
+      end_session_on_fail: false,
       screenshots: {
         enabled: false,
         path: 'screens',
@@ -33,16 +34,16 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'firefox'
+        browserName : 'chrome'
       },
 
       webdriver: {
         start_process: true,
-        server_path: (Services.geckodriver ? Services.geckodriver.path : '')
+        server_path: (Services.chromedriver ? Services.chromedriver.path : '')
       }
     },
 
-    
+
 
     firefox: {
       desiredCapabilities : {
@@ -70,6 +71,8 @@ module.exports = {
     },
 
     chrome: {
+      skip_testcases_on_fail: false,
+      end_session_on_fail: false,
       desiredCapabilities : {
         browserName : 'chrome',
         chromeOptions : {

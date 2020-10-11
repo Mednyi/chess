@@ -35,7 +35,14 @@ describe('Auth component testing', () => {
             const component = createComponent();
             for(let password of mockPasswords) {
                 component.render = () => true;
-                component.$el = {children: [0, {children: [{value: password}]}]};
+                component.$el = {
+                    children: [
+                        null,
+                        {
+                            querySelector: () => ({value: password})
+                        }
+                    ]
+                };
                 component.methods.verifyPass();
                 console.log(password);
                 expect(component.data.passErr).to.equal(false)
@@ -45,7 +52,14 @@ describe('Auth component testing', () => {
             const component = createComponent();
             for(let password of mockPasswordsBad) {
                 component.render = () => true;
-                component.$el = {children: [0, {children: [{value: password}]}]};
+                component.$el = {
+                    children: [
+                        null,
+                        {
+                            querySelector: () => ({value: password})
+                        }
+                    ]
+                };
                 component.methods.verifyPass();
                 console.log(password);
                 expect(component.data.passErr).to.equal(true)
