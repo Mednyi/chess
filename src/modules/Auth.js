@@ -1,8 +1,8 @@
 'use strict';
 import Component from './framework/component.js';
 export default class Auth extends Component {
-    constructor() {
-        super({}, './assets/css/auth.css');
+    constructor($el) {
+        super({}, './assets/css/auth.css', $el);
         this.data.password = '';
         this.data.email='';
         this.data.mailErr = undefined;

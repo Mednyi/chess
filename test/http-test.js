@@ -113,7 +113,7 @@ describe('REQRES API test', () => {
                 body: 'bar1',
                 userId: 1,
               };
-            chai.request(reqresAPI).put('/posts').send(data).then(res => {
+            chai.request(reqresAPI).put('/posts/1').send(data).then(res => {
                 expect(res).to.have.status(200);
                 expect(res.body).to.be.an('Object');
                 expect(res.body.title).to.be.equal(data.title);
@@ -127,8 +127,8 @@ describe('REQRES API test', () => {
             })
         })
         it('Delete data', done => {
-            chai.request(reqresAPI).delete('/posts').send().then(res => {
-                expect(res).to.have.status(204);
+            chai.request(reqresAPI).delete('/posts/1').send().then(res => {
+                expect(res).to.have.status(200);
                 done();
             }).catch(err => {
                 expect(err).to.be.equal(null);

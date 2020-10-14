@@ -18,7 +18,6 @@ export default class Component {
     destroy () {
         const oldCSS = document.querySelector(`link[href="${this.$css}"]`);
         if(oldCSS) oldCSS.remove();
-        if(this.$el) this.$el.remove();
         delete this;
     }
     onRender () {}

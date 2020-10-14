@@ -10,14 +10,30 @@ export default class Router {
             path.pop();
             this.basePath = path.join('/');
         }
+        this.push = this.push.bind(this)
+        window.addEventListener('hashchange', this.push)
         this.render();
     }
     push (routeName) {
-        const newPath = `${this.basePath}/#/${this.routes[routeName].path}`;
-        history.pushState(null, null, newPath); // history - browser (BOM) object for route management
-        const newComponent = new this.routes[routeName].component();
-        this.$el.outerHTML = newComponent.render().outerHTML;
+        let newComponent
+        let newPath
+        if (typeof routeName === 'object') {
+            const hash = window.location.hash
+            let currentRoute
+            if (!hash) {
+                currentRoute = Object.values(this.routes).find(route => route.path === '');
+            } else {
+                const path = hash.split('/')[1];
+                currentRoute = Object.values(this.routes).find(route => route.path === path)
+            }
+            newComponent = new currentRoute.component(this.$el);
+        } else {
+            newPath = `${this.basePath}/#/${this.routes[routeName].path}`;
+            history.pushState(null, null, newPath); // history - browser (BOM) object for route management
+            newComponent = new this.routes[routeName].component(this.$el);
+        }
         this.component.destroy();
+        newComponent.render();
         this.component = newComponent;
     }
     render () {
