@@ -1,10 +1,9 @@
 export default [
-    '',
-    `<div></div>`,
-    `
+    function () {
+    return `
     <main>
         <article class ="article1">
-            <h4> Amazing Checkmates </h4>
+            <h4> ${this.data.text} </h4>
             <hr>
         </article>
         <article class = "article2">
@@ -16,4 +15,5 @@ export default [
         <img class="ladia" src="assets/images/ladia.png">
     </main>
     `
+    }
 ]

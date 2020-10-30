@@ -6,6 +6,7 @@ import Landing from "./modules/Landing.js";
 import Router from "./modules/framework/Router.js"
 import Auth from "./modules/Auth.js";
 import Profile from "./modules/Profile.js"
+import Desk from "./modules/Desk.js"
 const router = new Router(undefined, {
     landing: {
         path: '',
@@ -18,6 +19,10 @@ const router = new Router(undefined, {
     profile: {
         path: 'profile',
         component: Profile
+    },
+    game : {
+        path: 'game',
+        component: Desk
     }
 });
 Component.use({$router: router});

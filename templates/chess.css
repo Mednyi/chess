@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+.desk {
+    display: grid;
+    grid-template-columns: repeat(8, 64px);
+    grid-template-rows: repeat(8, 64px);
+    width: max-content;
+    border: solid black;
+}
+.cell {
+    width: 64px;
+    height: 64px;
+}
+.black {
+    background-color: #492D27;
+}
+.white {
+    background-color: #D7CF9E;
+}

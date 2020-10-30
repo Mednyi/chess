@@ -23,7 +23,7 @@ export default class Profile extends Component {
             </div>
         </section>
         <section class="buttons">
-            <div class="button">New game</div>
+            <div id="newgame" class="button">New game</div>
             <div class="button">Load game</div>
             <div class="button">Settings</div>
         </section>
@@ -32,8 +32,12 @@ export default class Profile extends Component {
     }
     methods () {
         return {
+            newGame () {
+                this.$router.push('game')
+            }
         }
     }
     onRender() {
+        this.$el.querySelector('#newgame').onclick = this.methods.newGame
     }
 }
